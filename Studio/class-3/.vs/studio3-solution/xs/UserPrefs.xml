@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{7C7F43B7-ECFD-46E3-8DDB-B71C110D1A81}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="studio3-solution/MenuItem.cs">
+    <Files>
+      <File FileName="studio3-solution/Program.cs" Line="1" Column="1" />
+      <File FileName="studio3-solution/Menu.cs" Line="11" Column="28" />
+      <File FileName="studio3-solution/MenuItem.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="studio3-solution" expanded="True">
+            <Node name="studio3-solution" expanded="True">
+              <Node name="MenuItem.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.studio3-solution FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

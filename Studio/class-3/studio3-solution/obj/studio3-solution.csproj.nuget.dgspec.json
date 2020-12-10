@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/sallysteuterman/Development/LaunchCode/CSharp/studio3-solution/studio3-solution/studio3-solution.csproj": {}
+  },
+  "projects": {
+    "/Users/sallysteuterman/Development/LaunchCode/CSharp/studio3-solution/studio3-solution/studio3-solution.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sallysteuterman/Development/LaunchCode/CSharp/studio3-solution/studio3-solution/studio3-solution.csproj",
+        "projectName": "studio3-solution",
+        "projectPath": "/Users/sallysteuterman/Development/LaunchCode/CSharp/studio3-solution/studio3-solution/studio3-solution.csproj",
+        "packagesPath": "/Users/sallysteuterman/.nuget/packages/",
+        "outputPath": "/Users/sallysteuterman/Development/LaunchCode/CSharp/studio3-solution/studio3-solution/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sallysteuterman/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
