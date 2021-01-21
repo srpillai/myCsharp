@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Fancy Spa</h1>
+<div id="clientProfile">
+    <h3>Client profile</h3>
+</div>
+<div id="servicesMenu">
+    <h5>Facial Treatments</h5>
+    Your @ViewBag.client.SkinType skin type is best suited to the follow facial types:
+
+    <ul>
+        @foreach (string facial in ViewBag.client.GetFacials())
+        {
+            <li>@facial</li>
+        }
+    </ul>
+    <h5>Nail Services</h5>
+    @if (ViewBag.client.NailService == "manicure")
+    {
+        <p>Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
+    }
+    else
+    {
+        <p>Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
+    }
+</div>

@@ -1,0 +1,36 @@
+﻿@model SpaDay.ViewModels.AddUserViewModel;
+
+@{
+}
+
+<h1>Sign Up Form</h1>
+
+<!-- Bonus Mission does not require this if statement! -->
+@if (ViewBag.error != null)
+{
+    <p>@ViewBag.error</p>
+}
+
+<form method="post" action="/user">
+    <div class="form-group">
+        <label asp-for="Username">Username</label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email Address</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">Password</label>
+        <input type="password" asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VerifyPassword">Confirm Password</label>
+        <input type="password" asp-for="VerifyPassword" />
+        <span asp-validation-for="VerifyPassword"></span>
+    </div>
+    <input type='submit' value='Submit'>
+</form>
