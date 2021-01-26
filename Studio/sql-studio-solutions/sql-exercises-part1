@@ -1,0 +1,56 @@
+/* Create section: Students add 5 - 10 rows to the seeds table */
+INSERT INTO seeds (crop, encourages, use_by)
+VALUES ("Agastache", "bees & hummingbirds", 2020);
+
+INSERT INTO seeds (crop, encourages, use_by)
+VALUES ("Broccoli", "health", 2019);
+
+INSERT INTO seeds (crop, use_by)
+VALUES ("Sun Gold Tomato", 2022);
+
+INSERT INTO seeds (crop, encourages, use_by)
+VALUES ("Zinnia", "bees", 2020);
+
+INSERT INTO seeds (crop)
+VALUES ("Rutabaga");
+
+INSERT INTO seeds (crop, use_by)
+VALUES ("Sun Gold Tomato", 2024);
+
+INSERT INTO seeds (crop, encourages, use_by)
+VALUES ("Green Beans", "Cucumber", 2020);
+
+/* Read section: */
+SELECT * FROM seeds;
+
+SELECT crop FROM seeds;
+
+SELECT crop, use_by
+FROM seeds
+ORDER BY use_by DESC, crop ASC;
+
+SELECT * FROM seeds
+WHERE seed_id = 3;
+
+/* Update section: */
+UPDATE seeds
+SET use_by = 2024
+WHERE seed_id = 1;
+
+ALTER TABLE seeds
+ADD expired BOOLEAN;
+
+UPDATE seeds
+SET expired = true
+WHERE use_by <= 2019;
+
+/* Delete section: */
+DELETE FROM seeds WHERE seed_id = 4;
+
+DELETE FROM seeds WHERE expired = true;
+
+/* Bonus Exercises */
+SELECT * FROM seeds
+WHERE encourages IS NOT null;
+
+SELECT DISTINCT crop FROM seeds;

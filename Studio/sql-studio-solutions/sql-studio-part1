@@ -1,0 +1,64 @@
+/* 1) List all movie titles */
+SELECT title FROM movies;
+
+/* 2) List the title and year of each movie in the database in DESCENDING order of the year released. */
+SELECT title, year_released
+FROM movies
+ORDER BY year_released Desc; 
+
+/* 3) List all columns for all records of the directors table in ascending alphabetical order based on the director’s country of origin. */
+SELECT * FROM directors
+ORDER BY country ASC;
+
+/* 4) List all columns for all records of the directors table in ascending alphabetical order first by the director’s country of origin and then by the director’s last name. */
+SELECT * FROM directors
+ORDER BY country, last_name ASC;
+
+/* 5) Insert a new record into the directors table for Rob Reiner, an American film director. */
+INSERT INTO directors (first_name, last_name, country)
+VALUES ("Rob", "Reiner", "USA");
+
+/* 6) List the last name and director_id for Rob Reiner. */
+SELECT last_name, director_id FROM directors
+WHERE first_name="Rob" AND last_name="Reiner";
+
+/* 7) Insert a new record into the movies table for The Princess Bride, which was released in 1987 and directed by Rob Reiner. */
+INSERT INTO movies (title, year_released, director_id)
+VALUES ("The Princess Bride", 1987, 11);
+
+/* 8) Use an inner join in your SQL command to display a list of movie titles, years released, and director last names. */
+SELECT title, year_released, last_name FROM movies
+INNER JOIN directors ON movies.director_id=directors.director_id;
+
+/* 9) List all the movies in the database along with the first and last name of the director. Order the list alphabetically by the director’s last name. */
+SELECT title, first_name, last_name FROM movies
+INNER JOIN directors ON movies.director_id=directors.director_id
+ORDER BY last_name ASC;
+
+/* 10) Using WHERE, list the first and last name for the director of The Incredibles. */
+SELECT first_name, last_name
+FROM movies, directors
+WHERE title = "The Incredibles" AND movies.director_id = directors.director_id;
+
+/* 11) Using a join, list the last name and country of origin for the director of Roma. */
+SELECT last_name, country
+FROM directors
+INNER JOIN movies
+ON directors.director_id = movies.director_id and movies.title = "Roma";
+
+/* 12) Delete a row from the movies table, then list the contents of both tables. */
+DELETE FROM movies WHERE movie_id = 3;
+SELECT * FROM movies;
+SELECT * FROM directors;
+
+/* 13) Try to delete one person from the directors table. */
+DELETE FROM directors WHERE director_id = 3;
+/* This command results in an error because of the foreign key assignment. */
+
+/* Bonus Missions 1 & 2. */
+SELECT title AS Title, year_released AS Released, last_name AS "Last Name" FROM movies
+INNER JOIN directors ON movies.director_id=directors.director_id;
+
+SELECT first_name, last_name, title FROM directors
+INNER JOIN movies ON movies.director_id=directors.director_id
+WHERE first_name="Peter" AND last_name="Jackson";
