@@ -1,0 +1,24 @@
+﻿@model TechJobsAuthentication.ViewModels.AddJobViewModel
+
+<h1>Add a Job</h1>
+
+<form asp-controller="Home" asp-action="ProcessAddJobForm" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Employer"></label>
+        <input class="form-control" asp-for="Employer" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Skill"></label>
+        <input class="form-control" asp-for="Skill" />
+    </div>
+
+    <input type="submit" value="Add Job" />
+</form>
+
